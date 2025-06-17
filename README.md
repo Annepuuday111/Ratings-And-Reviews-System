@@ -1,79 +1,112 @@
-Project Documentation: Ratings & Review System
-====================================================
-# 1. Project Overview
-# A full-stack web application where users can view products and submit reviews. Built using:
+# ⭐ Ratings & Review System
 
-# Frontend: React (with CSS for styling)
-# Backend: Node.js + Express
-# Database: PostgreSQL
+A full-stack web application where users can view products and submit reviews.
 
-2. Setup Instructions
-Prerequisites
-Ensure the following are installed:
+## 🛠️ Tech Stack
 
-Node.js (v16+ recommended)
-PostgreSQL
-npm
+- **Frontend:** React (CSS for styling)  
+- **Backend:** Node.js + Express  
+- **Database:** PostgreSQL  
 
-pgAdmin (optional GUI)
+## 📁 Folder Structure
 
-Folder Structure
+```
 ratings-review-system/
 ├── client/       # React Frontend
 ├── server/       # Express Backend
 ├── database/     # PostgreSQL Schema
 ├── .env          # Environment Variables
+````
 
-Backend Setup
-Install dependencies:
-cd server
-npm install
+### ✅ Prerequisites
 
-Create .env file inside /server:
-PORT=5000
-DATABASE_URL=postgresql://<username>:<password>@localhost:5432/ratingsdb
+Ensure the following are installed:
 
-Start backend server:
-npm start
+- Node.js (v16+)
+- npm
+- PostgreSQL
+- pgAdmin (optional)
 
-Frontend Setup
-Install dependencies:
-cd client
-npm install
+### 🔌 Backend Setup
 
-Run the frontend app:
-npm start
+1. Navigate to the backend folder:
+   ```bash
+   cd server
+````
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file inside `/server`:
+   ```
+   PORT=5000
+   DATABASE_URL=postgresql://<username>:<password>@localhost:5432/ratingsdb
+   ```
+4. Start the backend server:
+   ```bash
+   npm start
+   ```
 
-Frontend will be available at:
-http://localhost:3000
+### 🌐 Frontend Setup
 
-Database Setup
-Open psql or pgAdmin and create the database:
-CREATE DATABASE ratingsdb;
+1. Navigate to the frontend folder:
 
-Run the schema file:
-psql -U <username> -d ratingsdb -f database/schema.sql
-This creates the products and reviews tables and inserts sample data.
+   ```bash
+   cd client
+   ```
 
-3. Testing the Application
-Functional Testing
-Go to http://localhost:3000
-Browse the list of products
-Click “View Details” to:
-View full product info
-Submit a star rating (1–5)
-Add a comment (with optional image)
-View other submitted reviews
+2. Install dependencies:
 
+   ```bash
+   npm install
+   ```
 
-API Testing (Optional)
+3. Run the frontend:
+
+   ```bash
+   npm start
+   ```
+
+Frontend will be available at: [http://localhost:3000](http://localhost:3000)
+
+### 🗄️ Database Setup
+
+1. Open `psql` or `pgAdmin` and create the database:
+
+   ```sql
+   CREATE DATABASE ratingsdb;
+   ```
+
+2. Run the schema file to create tables and insert sample data:
+
+   ```bash
+   psql -U <username> -d ratingsdb -f database/schema.sql
+   ```
+
+## ✅ Testing the Application
+
+### Functional Testing
+
+* Visit: [http://localhost:3000](http://localhost:3000)
+* Browse the list of products
+* Click "View Details" to:
+
+  * View product information
+  * Submit a star rating (1–5)
+  * Add a comment (optional image)
+  * View all submitted reviews
+
+### API Testing (Optional)
+
 Use Postman or browser:
-GET /api/products – List all products
-GET /api/products/:id – Get one product
-GET /api/reviews/:id – Reviews for product
-POST /api/reviews – Add new review
 
-Notes
-Ensure password in .env is correct and URL-encoded.
-Restart both frontend & backend after .env or proxy changes.
-React proxy is set in client/src/setupProxy.js to redirect /api to backend.
+* `GET /api/products` – List all products
+* `GET /api/products/:id` – Get product by ID
+* `GET /api/reviews/:id` – Get reviews for a product
+* `POST /api/reviews` – Submit a new review
+
+## 📝 Notes
+
+* Ensure your `.env` file contains correct and URL-encoded credentials.
+* Restart both frontend and backend after making changes to `.env` or proxy.
+* Proxy is set in `client/src/setupProxy.js` to redirect `/api` to backend.
