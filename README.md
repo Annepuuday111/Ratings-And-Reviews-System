@@ -1,11 +1,11 @@
 Project Documentation: Ratings & Review System
 ====================================================
-1. Project Overview
-A full-stack web application where users can view products and submit reviews. Built using:
+# 1. Project Overview
+# A full-stack web application where users can view products and submit reviews. Built using:
 
-Frontend: React (with CSS for styling)
-Backend: Node.js + Express
-Database: PostgreSQL
+# Frontend: React (with CSS for styling)
+# Backend: Node.js + Express
+# Database: PostgreSQL
 
 2. Setup Instructions
 Prerequisites
