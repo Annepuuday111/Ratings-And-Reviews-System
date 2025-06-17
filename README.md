@@ -11,12 +11,16 @@ A full-stack web application where users can view products and submit reviews.
 ## 📁 Folder Structure
 
 ```
+
 ratings-review-system/
 ├── client/       # React Frontend
 ├── server/       # Express Backend
 ├── database/     # PostgreSQL Schema
 ├── .env          # Environment Variables
+
 ````
+
+## ⚙️ Setup Instructions
 
 ### ✅ Prerequisites
 
@@ -33,16 +37,22 @@ Ensure the following are installed:
    ```bash
    cd server
 ````
+
 2. Install dependencies:
+
    ```bash
    npm install
    ```
+
 3. Create a `.env` file inside `/server`:
+
    ```
    PORT=5000
    DATABASE_URL=postgresql://<username>:<password>@localhost:5432/ratingsdb
    ```
+
 4. Start the backend server:
+
    ```bash
    npm start
    ```
